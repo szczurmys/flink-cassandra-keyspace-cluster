@@ -40,8 +40,8 @@ the License.
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/szczurmys/flink-cassandra-keyspace-cluster.git</connection>
-        <developerConnection>scm:git:ssh://github.com:szczurmys/flink-cassandra-keyspace-cluster.git</developerConnection>
+        <connection>scm:git:ssh://git@github.com:/szczurmys/flink-cassandra-keyspace-cluster.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/szczurmys/flink-cassandra-keyspace-cluster.git</developerConnection>
         <url>http://github.com/szczurmys/flink-cassandra-keyspace-cluster/tree/master</url>
     </scm>
 
