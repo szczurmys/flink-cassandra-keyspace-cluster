@@ -15,7 +15,7 @@ the License.
 
     <groupId>com.github.szczurmys</groupId>
     <artifactId>flink-cassandra-keyspace-cluster</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Apache Flink, Cassandra keyspace cluster</name>
@@ -41,7 +41,7 @@ the License.
         <connection>scm:git:ssh://git@github.com:/szczurmys/flink-cassandra-keyspace-cluster.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/szczurmys/flink-cassandra-keyspace-cluster.git</developerConnection>
         <url>http://github.com/szczurmys/flink-cassandra-keyspace-cluster/tree/master</url>
-      <tag>flink-cassandra-keyspace-cluster-1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <dependencies>
