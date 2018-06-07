@@ -10,7 +10,7 @@
  * the License.
  */
 
-package pl.goszczurny.flink.streaming.connectors.cassandra;
+package com.github.szczurmys.flink.streaming.connectors.cassandra;
 
 import com.datastax.driver.core.Cluster;
 import org.apache.flink.streaming.connectors.cassandra.ClusterBuilder;
