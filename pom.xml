@@ -32,10 +32,17 @@ the License.
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Jakub Goszczurny</name>
+            <url>http://github.com/szczurmys</url>
+        </developer>
+    </developers>
+
     <scm>
-        <url>https://github.com/szczurmys/flink-cassandra-keyspace-cluster</url>
-        <connection>scm:git:git@github.com:szczurmys/flink-cassandra-keyspace-cluster.git</connection>
-        <developerConnection>scm:git:git@github.com:szczurmys/flink-cassandra-keyspace-cluster.git</developerConnection>
+        <connection>scm:git:git://github.com/szczurmys/flink-cassandra-keyspace-cluster.git</connection>
+        <developerConnection>scm:git:ssh://github.com:szczurmys/flink-cassandra-keyspace-cluster.git</developerConnection>
+        <url>http://github.com/szczurmys/flink-cassandra-keyspace-cluster/tree/master</url>
     </scm>
 
     <dependencies>
