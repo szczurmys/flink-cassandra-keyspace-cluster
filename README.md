@@ -15,7 +15,9 @@ public class Main {
         if(args.length > 0) {
             keyspace = args[0];
         }
-    
+
+        final TypeCodec<LocalDateTime> localDateTimeCodec = null; //Own codec
+
         //...
         CassandraPojoSink<Pojo> sink = new CassandraPojoSink<>(
             Pojo.class, 
@@ -23,6 +25,13 @@ public class Main {
                 @Override
                 protected Cluster.Builder filledBuilder(Cluster.Builder builder) {
                     return builder.addContactPoint("localhost");
+                }
+                @Override
+                protected void configureCluster(Cluster cluster) {
+                    cluster
+                        .getConfiguration()
+                        .getCodecRegistry()
+                        .register(localDateTimeCodec);
                 }
             }
         );
@@ -43,12 +52,20 @@ In standard solution you have to define constant keyspace in annotation:
 public class Main {
     public void main(String[] args) {
         //...
+
+        final TypeCodec<LocalDateTime> localDateTimeCodec = null; //Own codec
+
         CassandraPojoSink<Pojo> sink = new CassandraPojoSink<>(
             Pojo.class, 
             new ClusterBuilder() {
                 @Override
                 protected Cluster buildCluster(Cluster.Builder builder) {
-                    return builder.addContactPoint("localhost").build();
+                    Cluster cluster = builder.addContactPoint("localhost").build();
+                    cluster
+                        .getConfiguration()
+                        .getCodecRegistry()
+                        .register(localDateTimeCodec);
+                    return cluster;
                 }
             }
         );

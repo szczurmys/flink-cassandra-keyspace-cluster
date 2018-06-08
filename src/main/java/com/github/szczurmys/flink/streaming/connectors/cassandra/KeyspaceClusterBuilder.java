@@ -29,8 +29,10 @@ public abstract class KeyspaceClusterBuilder extends ClusterBuilder {
     }
 
     @Override
-    protected Cluster buildCluster(Cluster.Builder builder) {
-        return new KeyspaceCluster(keyspace, filledBuilder(builder));
+    protected final Cluster buildCluster(Cluster.Builder builder) {
+        KeyspaceCluster keyspaceCluster = new KeyspaceCluster(keyspace, filledBuilder(builder));
+        configureCluster(keyspaceCluster);
+        return keyspaceCluster;
     }
 
     /**
@@ -42,4 +44,14 @@ public abstract class KeyspaceClusterBuilder extends ClusterBuilder {
      * @return configured connection builder
      */
     protected abstract Cluster.Builder filledBuilder(Cluster.Builder builder);
+
+    /**
+     * Configures built cluster.
+     * The configuration is done by calling methods on the cluster object
+     * and finalizing the configuration with connect(...).
+     *
+     * @param cluster built cluster
+     */
+    protected void configureCluster(Cluster cluster) {
+    }
 }
