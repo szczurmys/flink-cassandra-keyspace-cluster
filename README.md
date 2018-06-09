@@ -1,4 +1,10 @@
-# flink-cassandra-keyspace-cluster
+flink-cassandra-keyspace-cluster
+================================
+
+[![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/apache/maven.svg?label=License)](license)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.szczurmys/flink-cassandra-keyspace-cluster.svg?label=Maven%20Central)](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.github.szczurmys%22%20AND%20a%3A%22flink-cassandra-keyspace-cluster%22)
+
+
 An extension for flink cassandra connector that lets you specify default cassandra keyspace.
 
 <br />
