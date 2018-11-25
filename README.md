@@ -9,7 +9,19 @@ An extension for flink cassandra connector that lets you specify default cassand
 
 <br />
 
-The main adventages of the KeyspaceClusterBuilder is that it allows you to use POJO (using mappers http://docs.datastax.com/en/drivers/java/2.1/com/datastax/driver/mapping/Mapper.html) without defining constant keyspace, and you can get keyspace from properties.
+**For flink version >= 1.6 you should not use it, because it does not work.**<br/>
+They added defaultKeyspace parameter for connector builder:
+```java
+        CassandraSink.addSink(dataSource)
+                //...
+                .setDefaultKeyspace("Your default keyspace")
+                //...
+                .build();
+```
+
+
+
+The main adventages (for flink version < 1.6) of the KeyspaceClusterBuilder is that it allows you to use POJO (using mappers http://docs.datastax.com/en/drivers/java/2.1/com/datastax/driver/mapping/Mapper.html) without defining constant keyspace, and you can get keyspace from properties.
 
 <br />
 
